@@ -26,9 +26,9 @@ void
         }
     }
 
-    //LOGP_ERROR( "Kernel panic!\n");
+    LOGP_ERROR( "Kernel panic!\n");
 
-    //LOGP_ERROR("Thread: [%s]\n", ThreadGetName(NULL));
+    LOGP_ERROR("Thread: [%s]\n", ThreadGetName(NULL));
 
     LOGP_ERROR( "%s\n", Message);
 

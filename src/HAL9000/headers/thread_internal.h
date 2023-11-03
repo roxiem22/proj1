@@ -90,6 +90,17 @@ typedef struct _THREAD
     PVOID                   UserStack;
 
     struct _PROCESS*        Process;
+
+    APIC_ID CreationCpuApicId;
+
+    // for thread as a child
+    TID ParentId;
+    // for thread as a parent
+    unsigned long NumberOfChildrenCreated;
+    volatile DWORD NumberOfActiveChildren;
+
+    QWORD noOfQuanta;
+
 } THREAD, *PTHREAD;
 
 //******************************************************************************
@@ -282,3 +293,8 @@ void
 ThreadSetPriority(
     IN      THREAD_PRIORITY     NewPriority
     );
+
+PTHREAD
+_ThreadReferenceByTid(
+    TID ThreadId
+);

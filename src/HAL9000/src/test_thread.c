@@ -3,8 +3,8 @@
 #include "test_timer.h"
 #include "test_priority_scheduler.h"
 #include "test_priority_donation.h"
-
 #include "mutex.h"
+#include "test_lp.h"
 
 
 FUNC_ThreadStart                TestThreadYield;
@@ -20,6 +20,7 @@ const THREAD_TEST THREADS_TEST[] =
     // Tests just for fun
     { "ThreadYield", TestThreadYield, NULL, NULL, NULL, NULL, FALSE, FALSE },
     { "Mutex", TestMutexes, TestPrepareMutex, (PVOID) FALSE, NULL, NULL, FALSE, FALSE },
+    { "Fibo", _MultithreadFibonacci, NULL, NULL, NULL, NULL, FALSE, FALSE },
     { "CpuIntense", TestCpuIntense, NULL, NULL, NULL, NULL, FALSE, FALSE },
 
     // Actual tests used for validating the project

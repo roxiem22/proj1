@@ -72,7 +72,7 @@
       <SDLCheck>true</SDLCheck>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAsManaged>false</CompileAsManaged>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -84,7 +84,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <OpenMPSupport>false</OpenMPSupport>
       <EnablePREfast>true</EnablePREfast>
-      <AdditionalIncludeDirectories>headers;..\shared\common;..\shared\kernel;..\..\acpi\inc;..\commonlib\inc;..\HAL\inc;..\SwapFS\inc;..\FAT32\inc;..\PE_Parser\inc;..\Eth_82574L\inc;..\NetworkStack\inc;..\Disk\inc;..\Volume\inc;..\Ata\inc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>headers;..\shared\common;..\shared\kernel;..\..\acpi\inc;..\commonlib\inc;..\HAL\inc;..\SwapFS\inc;..\FAT32\inc;..\PE_Parser\inc;..\Eth_82574L\inc;..\NetworkStack\inc;..\Disk\inc;..\Volume\inc;..\Ata\inc;..\HAL9000\headers</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4313;4474;4476;4477;</DisableSpecificWarnings>
       <ShowIncludes>false</ShowIncludes>
       <MinimalRebuild>false</MinimalRebuild>
@@ -264,6 +264,7 @@
     <ClCompile Include="src\os_time.c" />
     <ClCompile Include="src\vmm.c" />
     <ClCompile Include="src\vm_reservation_space.c" />
+    <ClCompile Include="test_lp.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\shared\common\mem_structures.h" />
@@ -366,6 +367,7 @@
     <ClInclude Include="headers\um_application.h" />
     <ClInclude Include="headers\vmm.h" />
     <ClInclude Include="headers\vm_reservation_space.h" />
+    <ClInclude Include="test_lp.h" />
   </ItemGroup>
   <ItemGroup>
     <YASM Include="src\_mboot32.yasm">
